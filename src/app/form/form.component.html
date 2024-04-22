@@ -33,10 +33,13 @@
         <input type="password" class="form-control" formControlName="password" required>
         <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
             <div *ngIf="password?.errors?.['required']">Required</div>
-            <div *ngIf="password?.errors?.['pattern']">Password must contain One Uppercase & One Lowercase Letter</div>
+            <!-- I'm just adding a new line for each req -->
+            <div *ngIf="!password?.value?.match('^(?=.*[A-Z])')"> At least one uppercase</div>  
+            <div *ngIf="!password?.value?.match('(?=.*[a-z])')">At least one LowerCase</div> 
         </div>
     </div>
-    <button class="btn-submit" type="submit" [disabled]="form.invalid">Submit</button>
+    <!-- add the routerLink -->
+    <button routerLink="/profile/{{fullName?.value}}" class="btn-submit" type="submit" [disabled]="form.invalid">Submit</button>
 
     
 </form>

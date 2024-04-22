@@ -1,0 +1,21 @@
+<!-- Copying the nav layout from Arfi & Moving the whole component (desc-text, button, profile-pict) into this new profile component that is going to be the profile page base-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="float: right; font-size: 13pt; font-weight: 500;">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Works</a>
+            <a class="nav-item nav-link active" href="#">Blog</a>
+            <a class="nav-item nav-link active" href="#">Contact</a>
+        </div>
+    </div>
+</nav>
+<div style="margin:0 30% 0 30%; display: flex; justify-content: center;align-items: center;">
+    <div>
+        <!-- Removing the title-text component and add the name props here so that the page would change the name depends on what you inputed  -->
+        <h1>Hi I'm {{name}}</h1>
+        <app-desc-text></app-desc-text>
+        <app-button></app-button>
+    </div>
+    <div>
+        <app-profile-picture></app-profile-picture>
+    </div>
+</div>

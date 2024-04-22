@@ -8,6 +8,16 @@ import { ProfilePictureComponent } from './profile-picture/profile-picture.compo
 import { DescTextComponent } from './desc-text/desc-text.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [ //Create the Original ROute (login) and the destined profile page
+  { path: 'login', component: LoginComponent},
+  { path: 'profile/:name', component: ProfileComponent},
+  { path: '', redirectTo:'/login', pathMatch:'full'},
+  { path: '*', redirectTo:'/login', pathMatch:'full'}
+];
 
 @NgModule({
   declarations: [
@@ -17,8 +27,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProfilePictureComponent,
     DescTextComponent,
     FormComponent,
+    ProfileComponent,
+    LoginComponent,
   ],
   imports: [
+    RouterModule.forRoot(routes), //import this one too
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,

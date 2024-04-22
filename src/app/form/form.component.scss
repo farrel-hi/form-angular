@@ -1,0 +1,20 @@
+form{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+form>input{
+    margin-bottom: 10px;
+}
+select{
+    margin-bottom: 10px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+.btn-submit{
+    width:100px;
+    height: 25px;
+}

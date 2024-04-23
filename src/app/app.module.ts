@@ -3,9 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
-import { TitleTextComponent } from './title-text/title-text.component';
 import { ProfilePictureComponent } from './profile-picture/profile-picture.component';
-import { DescTextComponent } from './desc-text/desc-text.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
@@ -23,9 +21,7 @@ const routes: Routes = [ //Create the Original ROute (login) and the destined pr
   declarations: [
     AppComponent,
     ButtonComponent,
-    TitleTextComponent,
     ProfilePictureComponent,
-    DescTextComponent,
     FormComponent,
     ProfileComponent,
     LoginComponent,
